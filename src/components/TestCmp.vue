@@ -16,8 +16,15 @@
 </template>
 
 <script>
+  var mixin = {
+    created: () => {
+      console.log('大桥未久老师');
+    }
+  };
+
   export default {
     name: 'TestCmp',
+    mixins: [mixin],
     data() {
       return {
       }
