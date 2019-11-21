@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+/*引入公共样式*/
+
+@import "base";
+
+@import "common";
+
+/*公共样式*/
+.mine_inp_blue {
+    background-color: $backgroundColor;
+    color: #FFFFFF;
+}
+.pay_bg {
+    background: #FFFFFF;
+}
+
+.mine_div_co {
+    color: #848B90;
+}
+
+.mine_div_mo {
+    margin-top: 0;
+}
+
+/*具体内容样式*/
+
+.main_content {
+    width: 100%;
+
+    .mine_div {
+        background: #FFFFFF;
+        padding: rem(30) 0 rem(30);
+        position: relative;
+        margin-bottom: rem(24);
+
+        .mine_div_list {
+            display: block;
+            padding: 0 rem(45);
+
+            li {
+                width: 20%;
+                float: left;
+
+                img {
+                    border: solid 1px #E9EEF1;
+                    border-radius: 5px;
+                    width: 100%;
+                }
+            }
+
+            .mine_list_second {
+                width: rem(552);
+                margin: 0 2%;
+
+                .mine_div_ft {
+                    font-size: rem(48);
+                    margin-top: rem(30);
+                    color: #000922;
+                }
+
+                .mine_div_co {
+                    margin-top: 0;
+                }
+            }
+
+            .mine_list_last {
+                text-align: right;
+                margin-top: rem(60);
+
+                .mine_div_tch {
+                    display: inline-block;
+                    color: #FFFFFF;
+                    background-color: $backgroundColor;
+                    border-radius: 6px;
+                    height: rem(72);
+                    line-height: rem(72);
+                    padding: 0 rem(18);
+                }
+            }
+        }
+        .acc_list {
+            padding-top: rem(30);
+            margin-top: rem(30);
+            border-top: solid 1px #eee;
+            background: #fff;
+
+            .acc_list_li {
+                display: block;
+                float: left;
+                width: 33.3%;
+                color: #848B90;
+
+                span,
+                a {
+                    display: block;
+                    text-align: center;
+                }
+
+                .acc_li_blue {
+                    color: $fontSize;
+                    font-size: rem(66);
+                }
+
+                .acc_li_blue,
+                .acc_li_black {
+                    font-weight: bold;
+                    height: rem(84);
+                    line-height: rem(84);
+                }
+
+                .acc_li_black {
+                    color: #4a4a4a;
+                    font-size: rem(48);
+                }
+            }
+        }
+    }
+
+    /*账户操作*/
+    .mine_take_list {
+        margin-bottom:rem(160);
+        .mine_list {
+            padding: rem(30) 3.5%;
+            border-bottom: solid 1px #F8FAFB;
+            background: #FFFFFF;
+
+            .mine_list_a {
+                display: block;
+
+                ul {
+                    display: block;
+                    width: 100%;
+                    color: #848B90;
+
+                    li {
+                        float: left;
+                        display: block;
+                        height: rem(126);
+                        line-height: rem(126);
+
+                        .icon_bg {
+                            display: inline-block;
+                            width: rem(81);
+                            height: rem(81);
+                            vertical-align: middle;
+                        }
+                        .icon_imgQQ {
+                            @include bgimg("../images/icon/qq.png");
+                        }
+                        .icon_img1 {
+                            @include bgimg("../images/icon/fl.png");
+                        }
+                        .icon_img2 {
+                            @include bgimg("../images/icon/tel.png");
+                        }
+                        .icon_img3 {
+                            @include bgimg("../images/icon/pwd.png");
+                        }
+                        .icon_img4 {
+                            @include bgimg("../images/icon/help.png");
+                        }
+                        .icon_img5 {
+                            @include bgimg("../images/icon/find_num.png");
+                        }
+
+
+                        .mine_list_sp {
+                            color: #ff6000;
+                            background: url(../images/icon/more_ml.png) 105% 50% no-repeat;
+                            background-size: rem(66);
+                            display: block;
+                            overflow: hidden;
+                        }
+
+                        .mine_list_co {
+                            color: #848B90;
+                        }
+
+                        .mine_list_btn {
+                            height: rem(72);
+                            line-height: rem(72);
+                            padding: 0 rem(18);
+                            border-radius: 6px;
+                            text-align: center;
+                            display: inline-block;
+                            vertical-align: middle;
+                            color: #FFFFFF;
+                            background-color: $backgroundColor;
+                        }
+
+
+                        &:first-child {
+                            width: 8%;
+                            text-align: left;
+                            margin-right: 2%;
+                        }
+                        &:nth-child(2) {
+                            width: 44%;
+                        }
+                        &:last-child {
+                            width: 46%;
+                            text-align: right;
+
+                            span {
+                                padding-right: rem(60);
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .mine_list_qie {
+                text-align: center;
+                height: rem(126);
+                line-height: rem(126);
+                color: $fontSize;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

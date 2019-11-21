@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/*引入公共样式*/
+@import "base";
+
+
+.search_header {
+  height: rem(135);
+  background: $backgroundColor;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 500;
+
+  .dets_top_div {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: rem(54);
+    line-height: rem(115);
+
+    .sea_top {
+      border-radius: 35px;
+      font-size: rem(42);
+      border: solid 1px #f8fafb;
+      padding: rem(9) rem(24);
+      width: 70%;
+      margin: rem(24) auto;
+      outline: none;
+    }
+  }
+
+  .top_nac_icon {
+    position: absolute;
+    bottom: 0;
+    left: rem(24);
+    background: url(../images/icon/xy.png)no-repeat 0 center;
+    background-size: rem(90);
+    width: rem(120);
+    height: rem(150);
+  }
+
+  .top_nac_icon3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url(../images/icon/icons_search_01.png)no-repeat 0 center;
+    background-size: rem(60);
+    width: rem(126);
+    height: rem(150);
+  }
+
+}

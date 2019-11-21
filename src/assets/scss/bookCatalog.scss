@@ -1,0 +1,324 @@
+@charset "utf-8";
+
+/*引入公共样式*/
+@import "base";
+
+@import "common";
+
+.index_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: rem(135);
+  background: $backgroundColor;
+  width: 100%;
+  margin: 0;
+  z-index: 100;
+
+  .dets_top_div {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: rem(54);
+    line-height: rem(135);
+  }
+
+  .top_nac_icon {
+    position: absolute;
+    bottom: 0;
+    left: rem(24);
+    background: url(../images/icon/xy.png)no-repeat 0 center;
+    background-size: rem(90);
+    width: rem(120);
+    height: rem(135);
+  }
+
+  .top_nac_icon3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url(../images/icon/home.png)no-repeat 0 center;
+    background-size: rem(90);
+    width: rem(120);
+    height: rem(135);
+  }
+}
+
+/*目录*/
+.main_bookCatalog {
+  background: #FFFFFF;
+
+  /*标题选择*/
+  .catalog_tab {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    background: #FFFFFF;
+    top:  rem(135);
+    border-bottom: solid 1px #E9EEF1;
+    padding: rem(30) 0;
+    
+    .catalog_content {
+      padding: 0 rem(40);
+
+      .catalog_title {
+        font-size: rem(48);
+        color: #ff6600;
+        line-height: rem(90);
+        width: rem(600);
+      }
+
+      .catalog_check {
+        border: solid 1px $fontSize;;
+        border-radius: 6px;
+        color: $fontSize;
+        display: block;
+        height: rem(90);
+        line-height: rem(84);
+        width: rem(360);
+
+        span {
+          text-align: center;
+          width: 50%;
+          height: 100%;
+          font-size: rem(42);
+          overflow: hidden;
+          display: inline-block;
+        }
+        .tab_Positive {
+          border-radius: 6px 0 0 6px;
+        }
+        .tab_Reverse {
+          border-radius: 0 6px 6px 0;
+        }
+        .catalog_active {
+          color: #FFFFFF;
+          background: $backgroundColor;
+        }
+      }
+    }
+  }
+
+  $pageWdith:360;
+
+  /*booklist*/
+  .booklist {
+    padding-top: rem(288);
+    .booklist_ul {
+      overflow-y:auto; 
+      li {
+        position: relative;
+        display: block;
+        height: rem(120);
+        line-height: rem(120);
+        border-bottom: 1px solid #E9EEF1;
+        padding-left: rem(30);
+        padding-right: rem(150);
+
+        .item-link {
+          display: block;
+          width: 90%;
+          color: #505557;
+
+          .free {
+            text-align: right;
+            line-height: rem(78);
+            font-size: rem(36);
+            display: inline-block;
+            position: absolute;
+            height: rem(78);
+            top: rem(21);
+            right: rem(30);
+            color: #848b90;
+          }
+
+          .money {
+            position: absolute;
+            top: rem(24);
+            right: rem(30);
+            background: url(../images/icon/money.png) no-repeat left center;
+            background-size: rem(48);
+            padding-left: rem(60);
+            text-align: right;
+            line-height: rem(78);
+            font-size: rem(36);
+            width: auto;
+            color: #848b90;
+          }
+
+        }
+      }
+
+      .direct-ul-current {
+        background-color: $backgroundColor;
+        .item-link {
+          color: #FFFFFF;
+
+          span {
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+
+    /*页面号*/
+    .paging {
+      background: #FFFFFF;
+      width: rem(1020);
+      padding: rem(30);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+
+      .paging_last,.paging_next {
+        width: rem(252);
+        height: rem(84);
+        line-height: rem(84);
+        display: block;
+        background: $backgroundColor;
+        color: #FFFFFF;
+        text-align: center;
+      }
+
+      .disabled {
+        opacity: 0.55;
+        pointer-events: none;
+      }
+
+      .paging-sect {
+        appearance:none;
+        -webkit-appearance: none;
+        position: relative;
+        display: inline-block;
+        width: rem(240);
+        height: rem(84);
+        border: 1px solid #cbcbcb;
+        overflow: hidden;
+        margin-left: rem(140);
+
+        /*自己写的一个背景替遮盖掉select原有的*/
+        &:before {
+          content: " ";
+          display: block;
+          height: rem(84);
+          width: rem(60);
+          right: 0;
+          top: 0;
+          position: absolute;
+          z-index: -10;
+          background-color: #cbcbcb;
+        }
+
+        /*自己写的一个类图标替遮盖掉select原有的*/
+        &:after {
+          content: " ";
+          height: 0;
+          width: 0;
+          display: none;
+          position: absolute;
+          top: rem(33);
+          right: rem(12);
+          border-style: solid;
+          border-width: rem(15) rem(15) 0;   /*一个向下的三角形*/
+          border-color: #fff transparent;
+          pointer-events: none;
+          z-index: 20;
+        }
+
+        .catalogSect {
+          outline: none;
+          border: none;
+          width: rem(240);
+          height: rem(84);
+          background-color: rgba(255,255,255,0);
+          border-radius: 0;
+          overflow: hidden;
+          padding-left: rem(20);
+
+          option {
+            text-align: center;
+            outline: none;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*章节订阅*/
+.main_bookPurchase {
+  background: #FFFFFF;
+  width: 90%;
+  margin: rem(180) auto rem(30);
+  padding: rem(30);
+  color: #000922;
+
+  .chapter_title {
+    font-weight: bold;
+    color: #333333;
+    font-size: rem(45);
+    border-bottom: solid 1px #E9EEF1;
+    padding-bottom: rem(30);
+  }
+
+  .chapter_h {
+    font-size: rem(48);
+    color: $fontSize;
+    padding-bottom: 0;
+  }
+
+  .chapter_mes {
+    padding: rem(30);
+    background: #f0f1f3;
+    border: solid 1px #dedfe0;
+
+    span {
+      display: inline;
+      color: #ff6600;
+    }
+  }
+
+  .chapter_btn_d {
+    .chapter_btn {
+      padding: rem(24) rem(42);
+      margin: rem(40) auto 0;
+      display: block;
+      border-radius: 6px;
+      width: rem(350);
+      color: #FFFFFF;
+      text-align: center;
+      background: $backgroundColor;
+    }
+    .chapter_buy {
+      background: #ff6600;
+    }
+  }
+}
+
+.footer_bookPurchase {
+  text-align: center;
+
+  .chapter_btm {
+    a {
+      color: #848B90;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .chapter_pdb {
+    padding-bottom: rem(18);
+
+    .chapter_co1 {
+      color: #ff6000;
+    }
+  }
+
+  .chapter_co {
+    color: #333333;
+  }
+
+
+}

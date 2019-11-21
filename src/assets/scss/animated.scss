@@ -1,0 +1,84 @@
+.animated{
+  
+}    
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft-enter-active {
+  animation-name: fadeInLeft;
+  animation-duration: 0.6s;
+  animation-fill-mode: both
+}
+
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.fadeInLeft-leave-active {
+  animation-name: fadeOutRight;
+  animation-duration: 0.6s;
+  animation-fill-mode: both
+}
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 1;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight-enter-active {
+  animation-name: fadeInRight;
+  animation-duration: 0.6s;
+  animation-fill-mode: both
+}
+
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.fadeInRight-leave-active {
+  animation-name: fadeOutLeft;  
+  animation-duration: 0.6s;
+  animation-fill-mode: both
+}
+
+.wrap{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+}

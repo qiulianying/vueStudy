@@ -1,0 +1,557 @@
+@charset "utf-8";
+@import "base";
+@import "common";
+@mixin commonMarginTop {
+    margin-top: rem(24);
+}
+
+@mixin commonBackground {
+    background: #FFFFFF;
+}
+
+@mixin commonPadding {
+    padding: rem(30) 0;
+}
+
+@mixin footerMarginBottom {
+    margin-bottom: rem(153);
+}
+
+@mixin commonBox {
+    padding: 0 rem(45);
+    background: #FFFFFF;
+}
+
+@mixin commonTitle {
+    padding: rem(30) rem(45);
+    background: #FFFFFF;
+}
+
+@mixin borderBottom {
+    border-bottom: solid 1px #f8fafb;
+}
+
+
+/* 头部导航 */
+
+.read_head {
+    @include headFixed;
+    .head_wrap {
+        padding: 0 rem(30);
+        height: 100%;
+    }
+    .head_logo {
+        width: rem(354);
+        height: rem(72);
+        margin: rem(30) 0;
+    }
+    img,
+    span {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .head_right {
+        margin: rem(30) 0;
+    }
+    .head_user {
+        width: rem(72);
+        height: rem(72);
+    }
+    .head_recharge {
+        width: rem(144);
+        height: rem(63);
+        line-height: rem(72);
+        color: #FFFFFF;
+    }
+}
+
+
+/* 底部导航 */
+
+.read_footer {
+    @include footerFixed;
+    line-height: 1;
+    font-size: rem(36);
+    .read_footer_con {
+        padding: 0 rem(30);
+        height: rem(135);
+        line-height: rem(243);
+        a{
+            width: rem(243);
+        }
+        .current{
+            color: $fontSize;
+        }
+        .footer_shelf {
+            background: url(../images/btm_icon_01.png) no-repeat center rem(24);
+            background-size: rem(54);
+        }
+        .footer_shelf.current {
+            background: url(../images/btm_icon_01_on.png) no-repeat center rem(24);
+            background-size: rem(54);
+        }
+        .footer_mall {
+            background: url(../images/btm_icon_02.png) no-repeat center rem(24);
+            background-size: rem(54);
+        }
+        .footer_mall.current {
+            background: url(../images/btm_icon_02_on.png) no-repeat center rem(24);
+            background-size: rem(54);
+        }
+        .footer_search {
+            background: url(../images/btm_icon_03.png) no-repeat center rem(24);
+            background-size: rem(54);
+        }
+        .footer_search.current {
+            background: url(../images/btm_icon_03_on.png) no-repeat center rem(24);
+            background-size: rem(54);
+        }
+        .footer_mine {
+            background: url(../images/btm_icon_04.png) no-repeat center rem(24);
+            background-size: rem(54);
+        }
+        .footer_mine.current {
+            background: url(../images/btm_icon_04_on.png) no-repeat center rem(24);
+            background-size: rem(54);
+        }
+    }
+}
+
+//书城页分类导航
+.mall_nav {
+    @include commonBackground;
+    font-size: rem(54);
+    height: rem(141);
+    line-height: rem(141);
+    position: fixed;
+    left: 0;
+    top: rem(135);
+    width: 100%;
+    z-index: 999;
+    ul {
+        padding: 0 rem(60);
+        color: $fontSize;
+    }
+    .mall_nav_list {
+        position: relative;
+    }
+    .mall_nav_act.mall_nav_list:after {
+        background: $backgroundColor;
+        content: '';
+        position: absolute;
+        bottom: rem(18);
+        left: 50%;
+        width: 60%;
+        height: rem(6);
+        margin-left: -30%;
+    }
+}
+
+.mall_home,.mall_member,.mall_classify,.mall_free{
+    @include footerMarginBottom;
+    margin-top: rem(276);
+}
+
+//首页banner
+.mall_banner {
+    line-height: 1;
+    @include commonMarginBottom;
+    img {
+        width: 100%;
+    }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 4px;
+}
+
+.swiper-pagination-bullet {
+    width: rem(16);
+    height: rem(16);
+    background: #FFFFFF;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    width: rem(24);
+    border-radius: rem(24);
+    opacity: 0.8;
+    background: $backgroundColor;
+}
+
+.idx_title {
+    @include commonTitle;
+    @include borderBottom;
+}
+
+.book_list {
+    @include commonBox;
+}
+
+.book_list_mg {
+    @include commonBox;
+    @include commonMarginBottom;
+}
+
+.mall_title {
+    font-size: rem(54);
+    color: #000922;
+}
+
+.mall_title_more {
+    display: inline-block;
+    min-width: rem(135);
+    line-height: 1.8;
+    color: $fontSize;
+    background: url(../images/more_num.png) no-repeat right center;
+    background-size: rem(18) rem(30);
+}
+
+//猜你喜欢
+.mall_box {
+    @include commonBackground;
+    @include borderBottom;
+    padding: rem(30) rem(45);
+}
+
+.mall_brief {
+    width: rem(690);
+    margin-left: rem(60);
+    line-height: 1.8;
+    padding-top: rem(6);
+    .mall_brief_title {
+        font-size: rem(48);
+        color: #000922;
+    }
+    .brief_wid {
+        width: 74%;
+    }
+    .brief_wid_hot {
+        width: rem(432);
+    }
+    .brief_icon_hot {
+        background: url(../images/hot.png) no-repeat left top;
+        background-size: rem(60) rem(60);
+        padding-left: rem(60);
+    }
+    .mall_brief_con {
+        width: 100%;
+        margin-bottom: rem(6);
+    }
+    .mall_brief_icon {
+        background: url(../images/writer_01.png) no-repeat left center;
+        background-size: rem(48) rem(48);
+        padding-left: rem(60);
+    }
+    .mall_brief_num {
+        font-size: rem(36);
+        line-height: rem(75);
+    }
+    .brief_btn {
+        font-size: rem(30);
+        margin-left: rem(6);
+        line-height: rem(33);
+        height: rem(33);
+        padding: rem(3) rem(24);
+        border-radius: rem(30);
+        display: inline-block;
+        margin-top: rem(15);
+        color: #848b90;
+        border: solid 1px #caced1;
+    }
+    .brief_btn_red {
+        color: #ff5858;
+        border: solid 1px #ff5858;
+    }
+}
+
+.mall_cai {
+    @include commonBox;
+    @include commonMarginBottom;
+    .mall_name {
+        color: #515151;
+        font-size: rem(48);
+        width: 100%;
+        display: block;
+        padding: rem(36) 0;
+        line-height: 1.5;
+        @include borderBottom;
+    }
+    .mall_name:last-child {
+        border-bottom: none;
+    }
+}
+
+//精选游戏
+.mall_game_wrap {
+    line-height: 1.6;
+    text-align: center;
+    @include commonBox;
+    .mall_game_size {
+        width: rem(210);
+        height: rem(210);
+    }
+    .mall_game_name,
+    .mall_game_btn {
+        display: block;
+    }
+    .mall_game_name {
+        width: rem(231);
+        line-height: 1.8;
+    }
+    .mall_game_btn {
+        width: rem(180);
+        height: rem(84);
+        line-height: rem(84);
+        background: $backgroundColor;
+        color: #FFFFFF;
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+}
+
+.mall_game_shrink {
+    width: 100%;
+    height: rem(90);
+    @include commonMarginBottom;
+}
+
+.game_shrink {
+    background: #FFFFFF url(../images/game_btn_01.png) no-repeat center center;
+    background-size: auto rem(90);
+}
+
+.game_shrink_on {
+    background: #FFFFFF url(../images/game_btn_02.png) no-repeat center center;
+    background-size: auto rem(90);
+}
+
+//公告
+.notice_wrap {
+    @include commonTitle;
+    @include commonMarginBottom;
+    .notice_con {
+        height: rem(60);
+        line-height: rem(60);
+        background: url(../images/icon_notice.png) no-repeat left center;
+        background-size: rem(60) rem(60);
+        padding-left: rem(84);
+        .notice_con_link{
+          height:rem(60);
+          overflow: hidden;
+          width:rem(800);
+        }
+    }
+}
+
+//男女频热销榜
+.mall_rank_wrap {
+    @include commonTitle;
+    @include borderBottom;
+}
+
+.mall_rank_icon {
+    display: inline-block;
+    width: rem(180);
+}
+
+.mall_icon_nv {
+    background: url(../images/nv.png) no-repeat right center;
+    background-size: rem(175) rem(58);
+}
+
+.mall_icon_nan {
+    background: url(../images/nan.png) no-repeat right center;
+    background-size: rem(175) rem(58);
+}
+
+.mall_hot_more {
+    width: 100%;
+    color: $fontSize;
+    @include commonMarginBottom;
+    @include commonBackground;
+    padding: rem(30) 0;
+}
+
+.mall_icon_rank {
+    width: rem(45);
+    height: rem(60);
+    line-height: rem(51);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FFFFFF;
+    text-align: center;
+    background: url(../images/icon_rank_01.png) no-repeat left top;
+    background-size: rem(45) rem(60);
+}
+
+//版权信息
+.mall_copyright {
+    color: #848b90;
+    line-height: 2;
+    padding: rem(60) 0;
+    @include commonBackground;
+    .mall_down {
+        width: 85%;
+        background: rgba(172, 190, 206, 0.2);
+        margin: rem(30) auto 0;
+        border-radius: 6px;
+        padding: rem(18) rem(30);
+        line-height: 1.7;
+        .mall_down_logo {
+            width: rem(126);
+            height: rem(126);
+        }
+        .mall_down_word {
+            margin-left: rem(30);
+            .mall_down_tit {
+                color: #000922;
+            }
+            .mall_down_con {
+                font-size: rem(36);
+            }
+        }
+        .mall_down_btn {
+            display: inline-block;
+            background: $backgroundColor;
+            color: #FFFFFF;
+            border-radius: 6px;
+            margin: rem(15) 0 0 rem(24);
+            width: rem(156);
+            height: rem(99);
+            line-height: rem(99);
+        }
+    }
+}
+
+//首页会员
+
+.mall_mem_icon {
+    margin-top: rem(9);
+    padding-left: rem(75);
+}
+
+.mall_mem_select {
+    background: url(../images/vip_zs.png) no-repeat left center;
+    background-size: rem(60) rem(60);
+}
+
+.mall_mem_nan {
+    background: url(../images/vip_n.png) no-repeat left center;
+    background-size: rem(60) rem(60);
+}
+
+.mall_mem_nv {
+    background: url(../images/vip_nv.png) no-repeat left center;
+    background-size: rem(60) rem(60);
+}
+
+.mall_mem_rank {
+    background: url(../images/vip_rank.png) no-repeat left center;
+    background-size: rem(60) rem(60);
+}
+
+.mall_blue {
+    color: $fontSize;
+}
+
+.mall_black {
+    color: #6EAEFE;
+    font-size: rem(54);
+}
+
+//首页分类
+.mall_classify {
+    .classify_wrap {
+        @include commonBackground;
+        @include commonMarginBottom;
+        .classify_item {
+            width: rem(495);
+            padding: rem(30) 0 rem(30) rem(45);
+            @include borderBottom;
+            .classify_cover {
+                width: rem(105);
+                height: rem(135);
+            }
+            .classify_word {
+                width: rem(360);
+                margin-left: rem(30);
+                font-size: rem(48);
+                .classify_word_small {
+                    color: #a0a4ab;
+                    font-size: rem(39);
+                }
+            }
+        }
+    }
+}
+
+
+/*首页免费*/
+
+.mall_free {
+    .free_title,
+    .free_time {
+        display: inline-block;
+    }
+    .free_time {
+        color: $fontSize;
+        margin-left: rem(30);
+        .free_time_btn {
+            background: $backgroundColor;
+            color: #FFFFFF;
+            border-radius: 2px;
+            font-size: rem(36);
+            display: inline-block;
+            text-align: center;
+            width: rem(78);
+            height: rem(54);
+            line-height: rem(54);
+        }
+    }
+    .free_more {
+        background: url(../images/more_gray.png) no-repeat right center;
+        background-size: rem(54) rem(54);
+        padding-right: rem(60);
+        height: rem(81);
+        line-height: rem(81);
+    }
+    .free_icon {
+        position: absolute;
+        top: rem(26);
+        left: rem(30);
+        width: rem(54);
+        height: rem(114);
+        background: url(../images/free_icon.png) no-repeat left top;
+        background-size: 100% 100%;
+    }
+    .free_wid {
+        width: 69%;
+    }
+    .more_double {
+        width: rem(36);
+        height: rem(40);
+        line-height: rem(40);
+        display: inline-block;
+        margin-left: rem(15);
+        background: url(../images/more_double_blue.png) no-repeat right center;
+        background-size: rem(36) rem(36);
+    }
+}
+
+
+/*更多列表页*/
+
+.more_wrap {
+    .more_list {
+        @include commonBackground;
+        @include borderBottom;
+        padding: rem(45);
+    }
+     :last-child {
+        border-bottom: none;
+    }
+}

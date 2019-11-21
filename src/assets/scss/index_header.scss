@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/*引入公共样式*/
+
+@import "base";
+
+
+.index_header {
+  height: rem(135);
+  background: $backgroundColor;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  z-index: 500;
+
+  .dets_top_div {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: rem(54);
+    line-height: rem(135);
+  }
+
+  .top_nac_icon {
+    position: absolute;
+    bottom: 0;
+    left: rem(24);
+    background: url(../images/icon/xy.png)no-repeat 0 center;
+    background-size: rem(90);
+    width: rem(120);
+    height: rem(150);
+  }
+
+  .top_nac_icon3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url(../images/icon/home.png)no-repeat 0 center;
+    background-size: rem(90);
+    width: rem(120);
+    height: rem(150);
+  }
+
+}

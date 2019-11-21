@@ -1,0 +1,614 @@
+@charset "utf-8";
+
+/*引入公共样式*/
+@import "base";
+@import "common";
+
+@mixin commonBox {
+  padding: 0 rem(45);
+}
+
+/*不同字体大小*/
+
+.font_1 {
+  h3 {
+    font-size: rem(48);
+  }
+  p {
+    font-size: rem(42);
+  }
+}
+
+.font_2 {
+  h3 {
+    font-size: rem(54);
+  }
+  p {
+    font-size: rem(48);
+  }
+}
+
+.font_3 {
+  h3 {
+    font-size: rem(66);
+  }
+  p {
+    font-size: rem(60);
+  }
+}
+
+.font_4 {
+  h3 {
+    font-size: rem(75);
+  }
+  p {
+    font-size: rem(69);
+  }
+}
+
+.book_list_read {
+  margin-bottom: rem(30);
+  padding: rem(45);
+}
+
+/*白天模式*/
+
+.dayTime {
+  background: #d6ead5;
+  color: #2f442e;
+  a {
+    color: #2f442e;
+  }
+
+  .read_top {
+    .read_top_left {
+      background: url(../images/icon/logo_read.png) no-repeat left center;
+      background-size: 70%;
+    }
+  }
+  .read_title {
+    border-top: solid 1px #bbd5b9;
+
+    .title_change {
+      .day1 {
+        @include bgimg("../images/icon/read_moshi1.png")
+      }
+      .red_small {
+        @include bgimg("../images/icon/read_small1.png")
+      }
+      .red_big {
+        @include bgimg("../images/icon/read_big1.png")
+      }
+    }
+  }
+  .read_content {
+    .read-link {
+      color: #328e2e;
+    }
+  }
+  .read_down {
+    .idx_down {
+      background: rgba(172, 190, 206, 0.2);
+    }
+  }
+  .read_Catalog {
+    background: #c5e0c3;
+    /*无上一章节情况*/
+    .read_Catalog_none {
+      color: #95b094;
+    }
+  }
+
+  /*书籍推荐白天*/
+  .read_list {
+    .book_list_mg {
+      .read_per {
+        color: #848b90;
+      }
+    }
+    .link_book_item {
+      border: solid 1px #ccc;
+      color: #2f442e;
+
+      .link_book_img {
+        background: url(../images/icon/book_icon.png) no-repeat left center;
+        background-size: 100% 100%;
+      }
+      .link_book_city {
+        background: url(../images/icon/font_icon.png) no-repeat left center;
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  .read_more {
+    border: dashed 1px #95B094;
+  }
+
+  .read_down {
+    .idx_down_btn {
+      background: $backgroundColor;
+      color: #FFFFFF;
+    }
+  }
+}
+
+/*夜间模式*/
+
+.nigthTiem {
+  background: #181818;
+  color: #545455;
+
+  a {
+    /*    color: #2f442e;*/
+    color: #545455;
+  }
+
+  .read_top {
+    .read_top_left {
+      background: url(../images/icon/logo_read_yj.png) no-repeat left center;
+      background-size: 70%;
+    }
+
+    .link_book_city {
+      background: url(../images/icon/font_icon.png) no-repeat left center;
+      background-size: 100% 100%;
+    }
+  }
+  .read_title {
+    border-top: solid 1px #202020;
+    .title_change {
+      .day1 {
+        @include bgimg("../images/icon/read_moshi2.png")
+      }
+      .red_small {
+        @include bgimg("../images/icon/read_small2.png")
+      }
+      .red_big {
+        @include bgimg("../images/icon/read_big2.png")
+      }
+    }
+  }
+  .read_content {
+    .read-link {
+      color: #346097;
+    }
+    .read_Catalog {
+      background: #181818;
+      /*无上一章节情况*/
+      .read_Catalog_none {
+        color: #353536;
+      }
+    }
+  }
+  .read_down {
+    .idx_down {
+      background: rgba(172, 190, 206, 0.2);
+
+      .idx_down_word {
+        color: #848b90;
+      }
+    }
+  }
+
+  /*书籍推荐夜晚*/
+  .read_list {
+    .book_list_mg {
+      .read_per {
+        color: #545455;
+      }
+    }
+
+    .link_book_item {
+      border: solid 1px #545455;
+      color: #545455;
+
+      .link_book_img {
+        background: url(../images/icon/book_icon_drak.png) no-repeat left center;
+        background-size: 100% 100%;
+      }
+      .link_book_city {
+        background: url(../images/icon/font_icon_drak.png) no-repeat left center;
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  .read_more {
+    border: dashed 1px #202020;
+  }
+
+  .read_down {
+    img {
+      opacity: 0.6;
+    }
+
+    .idx_down_word {
+      h3 {
+        color: #aeb1b7;
+      }
+    }
+
+    .idx_down_btn {
+      background: #346097;
+      color: #b7b2b2;
+    }
+  }
+}
+
+/*页面样式*/
+
+.main_bookread {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow-y: auto;
+
+  /*read 顶部*/
+  .read_top {
+    height: rem(150);
+    line-height: rem(150);
+    padding: 0 rem(45);
+    .read_top_left {
+      width: rem(594);
+      height: rem(150);
+    }
+
+    .read_top_right {
+      width: rem(396);
+      height: rem(150);
+
+      ul {
+        width: 100%;
+        li {
+          display: block;
+          float: left;
+          width: 33.33%;
+
+          a {
+            display: block;
+
+            text-align: right;
+            font-size: rem(42);
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  /*read title*/
+  .read_title {
+    padding: rem(30) rem(45);
+
+    .read_title_look {
+      .title_content,
+      .title_change {
+        width: 50%;
+      }
+
+      .title_content {
+        a {
+
+          font-size: rem(45);
+        }
+
+        .read_idx_a {
+          background: url(../images/icon/read_jt.png) no-repeat right center;
+          background-size: rem(24);
+          padding-right: rem(48);
+          margin-right: rem(24);
+        }
+
+        .read_name_wid {
+          width: 60%;
+        }
+      }
+
+      .title_change {
+        span {
+          width: rem(90);
+          height: rem(60);
+          margin-right: rem(30);
+          display: inline-block;
+          vertical-align: middle;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  /*content*/
+  .read_content {
+    min-height: 100%;
+
+    .read_content_title {
+      padding: 0 rem(45) rem(45);
+
+      h3 {
+        text-indent: 2em;
+        padding: rem(45) 0;
+        font-weight: bold;
+      }
+
+      p {
+        word-break: break-all;
+        word-wrap: break-word;
+        text-align: justify;
+        line-height: 2;
+        margin-bottom: rem(30);
+        text-indent: 2em;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    .read-link {
+      margin-bottom: rem(75);
+      padding: 0 rem(45);
+      display: block;
+      line-height: 2;
+
+      font-size: rem(48);
+      width: rem(980);
+    }
+
+    .read_Catalog {
+      padding: rem(45) 0;
+      font-size: rem(48);
+
+      a {
+        width: 33.33%;
+        display: block;
+        float: left;
+        text-align: center;
+      }
+    }
+
+    /*游戏推荐*/
+    .read_game {
+      margin: rem(60) rem(45) 0 rem(45);
+      padding: rem(30) 0;
+      border-bottom: dashed 1px #93a892;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+
+      li {
+        /*        float: left;
+                width: 20%;*/
+        display: inline-block;
+        vertical-align: middle;
+
+        p {
+          text-indent: 0;
+          margin-bottom: 0;
+          line-height: 1.8;
+        }
+
+        .read_game_btn {
+          border-radius: 8px;
+          background: #328e2e;
+          color: #FFFFFF;
+          text-align: center;
+          vertical-align: middle;
+          width: rem(180);
+          height: rem(102);
+          line-height: rem(102);
+          margin-top: rem(39);
+          display: block;
+          float: right;
+        }
+      }
+
+      .read_game_img {
+        width: rem(195);
+        height: rem(195);
+
+        .read_game_pic {
+          width: rem(195);
+          height: rem(195);
+          border-radius: 22px;
+        }
+      }
+
+      .game_contetn {
+        margin-left: rem(20);
+        width: 55%;
+        .read_game_p1 {
+          width: 96%;
+          margin-top: rem(10);
+          font-size: rem(54);
+          font-weight: 600;
+          color: #328e2e;
+        }
+        .read_game_jian {
+          width: 96%;
+        }
+      }
+    }
+
+    /*书籍推荐*/
+    .read_list {
+      font-size: rem(42);
+      margin: rem(45) 0;
+
+      .read_tip_line {
+        width: 92%;
+        overflow: hidden;
+        display: block;
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+
+        &:before {
+          content: "";
+          width: rem(210);
+          height: 1px;
+          background: #838583;
+          position: absolute;
+          left: 0;
+          top: rem(36);
+        }
+
+        &:after {
+          content: "";
+          width: rem(210);
+          height: 1px;
+          background: #838583;
+          position: absolute;
+          right: 0;
+          top: rem(36);
+        }
+      }
+
+      .read_list_title {
+        width: 92%;
+        margin: rem(45) auto 0;
+
+        p {
+          display: inline-block;
+          vertical-align: middle;
+
+          &:first-child {
+            width: 78%;
+          }
+        }
+
+        .read_ref_bock {
+          .read_refresh {
+            width: rem(51);
+            height: rem(51);
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+            background: url(../images/icon/refresh.png) no-repeat left center;
+            background-size: 100% 100%;
+          }
+        }
+      }
+
+      .book_list_mg {
+        @include commonBox;
+        @include commonMarginBottom;
+
+        .book_list_word {
+          height: rem(160);
+        }
+
+        .read_per {
+          font-size: rem(42);
+          max-height: rem(72);
+          overflow: hidden;
+          text-align: left;
+          margin-bottom: rem(30);
+        }
+      }
+
+      .link_box {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+
+        .link_book_item {
+          border-radius: 10px;
+          line-height: rem(110);
+          height: rem(110);
+          padding: 0 rem(60);
+          display: inline-block;
+          vertical-align: middle;
+
+          &:first-child {
+            margin-right: rem(80);
+          }
+
+          .link_book_img {
+            width: rem(54);
+            height: rem(54);
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: rem(18);
+            margin-top: rem(-6);
+          }
+
+          .link_book_city {
+            width: rem(51);
+            height: rem(51);
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+            margin-top: rem(-6);
+          }
+        }
+      }
+    }
+
+    .read_game_p2 {
+      text-align: right;
+      padding: 0 rem(45);
+      color: #8da18c;
+      font-size: rem(42);
+      text-indent: 0;
+      margin-top: rem(20);
+      margin-bottom: rem(30);
+    }
+
+    .read_more_wrap {
+      padding: rem(90) rem(45) rem(18) rem(45);
+
+      .read_more {
+        padding: rem(60) rem(35);
+        border-radius: 8px;
+        font-size: rem(50);
+
+        p {
+          line-height: 1.8;
+          text-indent: 0;
+          margin-bottom: rem(30);
+        }
+      }
+    }
+  }
+
+  .read_down {
+    width: 100%;
+    padding: rem(70) 0 rem(60) 0;
+
+    .idx_down {
+      width: 86%;
+      margin: 0 auto;
+      border-radius: 6px;
+      padding: rem(18) rem(30);
+
+      img {
+        width: rem(126);
+        height: auto;
+      }
+
+      .idx_down_word {
+        margin-left: rem(30);
+        h3 {
+          font-size: rem(42);
+        }
+        p {
+          font-size: rem(36);
+        }
+      }
+
+      .idx_down_btn {
+        display: block;
+        border-radius: 6px;
+        margin: rem(15) 0 0 rem(24);
+        width: rem(156);
+        height: rem(100);
+        line-height: rem(100);
+        text-align: center;
+      }
+    }
+  }
+}

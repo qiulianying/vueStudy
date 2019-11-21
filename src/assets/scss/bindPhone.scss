@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+
+/*引入公共样式*/
+
+@import "base";
+
+@import "common";
+
+
+/*公共样式*/
+
+.mine_inp_blue {
+  background: $backgroundColor;
+  color: #FFFFFF;
+}
+
+.pay_bg {
+  background: #FFFFFF;
+}
+
+.padding_take {
+  padding: rem(60) rem(42);
+}
+
+.mine_co {
+  color: #848B90;
+}
+
+.mine_right {
+  color: $fontSize;
+  text-align: right;
+  margin-bottom: rem(50);
+}
+
+
+
+
+/*绑定手机，密码设置等输入框类型样式*/
+
+.main_bindPhome {
+  .mine_bd {
+    background-color: #FFFFFF;
+
+    .mine_bd_mgb {
+      margin-bottom: rem(45);
+    }
+
+    .mine_bd_div {
+      width: rem(990);
+      margin: 0 auto;
+      overflow: hidden;
+
+      .mine_inp {
+        width: calc(100% - 12px);
+        height: rem(108);
+        line-height: rem(108);
+        border-radius: 6px;
+        border: solid 1px #E9EEF1;
+        padding-left: 10px;
+        outline: none;
+      }
+
+      .mine_inp_wid1 {
+        display: inline-block;
+        vertical-align: middle;
+        width: calc(56% - 2px);
+        margin-right: 2%;
+      }
+
+      .mine_inp_wid2 {
+        width: calc(38% - 2px);
+      }
+
+      .mine_inp_red {
+        display: inline-block;
+        vertical-align: middle;
+        background: #ff6600;
+        color: #FFFFFF;
+        padding-left: 0;
+      }
+
+      /*按钮*/
+      .mine_btn {
+        margin: 0 auto rem(45);
+        text-align: center;
+        width: 50%;
+        display: block;
+        background: $backgroundColor;
+        color: #FFFFFF;
+        height: rem(108);
+        line-height: rem(108);
+        padding: 0 2%;
+        border-radius: 6px;
+        border: solid 1px #E9EEF1;
+      }
+
+
+      /*提示*/
+      .mine_co {
+        color: #848B90;
+      }
+    }
+  }
+}
+
+
+/*QQ帐号登录*/
+
+.other_login {
+  .other_login_title {
+    width: 92%;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+
+    &:before {
+      content: "";
+      width: rem(300);
+      height: 1px;
+      background: #E9EEF1;
+      position: absolute;
+      left: 0;
+      top: rem(36);
+    }
+
+    &:after {
+      content: "";
+      width: rem(300);
+      height: 1px;
+      background: #E9EEF1;
+      position: absolute;
+      right: 0;
+      top: rem(36);
+    }
+  }
+  .QQloading {
+    display: block;
+    width: rem(270);
+    margin: 0 auto;
+    text-align: center;
+    padding: rem(70) 0;
+
+    .QQicon {
+      width: rem(150);
+      height: rem(150);
+      display: inline-block;
+      @include bgimg("../images/icon/icons_qq.png")
+    }
+
+    p {
+      color: #848b90;
+    }
+  }
+}
+
+
+/*帐号找回页面样式*/
+
+.FindNum-content {
+  overflow: auto;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+
+  .find_num {
+    padding: rem(60) rem(42) rem(60) rem(42);
+    text-align: center;
+
+    .find_mgb {
+      margin-bottom: rem(42);
+
+      .co_gray {
+        color: #848b90;
+        display: inline-block;
+        vertical-align: middle;
+        width: 6em;
+        text-align: right;
+      }
+
+      .find_inp_com {
+        width: calc(64% - 2px);
+        border: solid 1px #dee1e2;
+        color: #848B90;
+        height: rem(108);
+        line-height: rem(108);
+        border-radius: 6px;
+        padding: 0 rem(20);
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 auto;
+        outline: none;
+      }
+      .find_inp_sel {
+        width: calc(68% - 2px);
+        color: #848B90;
+        height: rem(108);
+        line-height: rem(108);
+        border-radius: 6px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 auto;
+        outline: none;
+      }
+    }
+
+    .find_inp2 {
+      width: 90%;
+      height: rem(108);
+      line-height: rem(108);
+      border-radius: 6px;
+      text-align: center;
+      display: block;
+      vertical-align: middle;
+      margin: 0 auto;
+    }
+  }
+
+  .find_step {
+    border: solid 1px #f8fafb;
+    border-radius: 6px;
+    margin: 0 rem(54) rem(60) rem(54);
+
+    .find_step_tab {
+      padding: 0 10px;
+      border-bottom: solid 1px #f8fafb;
+
+      .find_step_sp {
+        display: inline-block;
+        height: rem(108);
+        line-height: rem(108);
+        width: 46%;
+        text-align: center;
+        margin-right: 6%;
+      }
+
+      .find_tab2 {
+        margin-right: 0;
+      }
+
+      .find_tab_active {
+        color: $fontSize;
+        border-bottom: solid 2px $fontSize;
+      }
+    }
+
+    .find_step_div {
+      margin: rem(30) rem(60);
+
+      img {
+        width: 100%;
+        margin: 0 auto rem(60);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

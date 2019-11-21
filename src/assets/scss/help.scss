@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/*引入公共样式*/
+@import "base";
+
+@import "common";
+
+/*公共样式*/
+/*公共样式*/
+.mine_inp_blue {
+  background: $backgroundColor;
+  color: #FFFFFF;
+}
+.pay_bg {
+  background: #FFFFFF;
+}
+
+.padding_help {
+  padding: rem(30) rem(42);
+}
+
+
+/*问题帮助页面样式*/
+.mine_content {
+  color: #000922;
+  width: 100%;
+  background: #FFFFFF;
+  @include topMarginTop;
+  
+  .problem_h {
+    font-size: rem(48);
+    color: $fontSize;
+    padding: rem(30) rem(42);
+    border-bottom: 1px solid #E9EEF1;
+  }
+
+  .problem {
+    .Pay {
+      .mine_tite {
+        font-size: rem(42);
+        border-bottom: 1px solid #E9EEF1;
+        overflow: hidden;
+      }
+
+      .problem_p_bg1 {
+        background: url(../images/icon/more_xia.png) 96% center no-repeat;
+        background-size: rem(66);
+      }
+
+      .problem_p_bg {
+        background: url(../images/icon/more_shang.png) 96% center no-repeat;
+        background-size: rem(66);
+      }
+
+      .Pay_con {
+        border-bottom: solid 1px #E9EEF1;
+        background: #f0f1f3;
+
+        p {
+          padding: rem(30) rem(42);
+          line-height: rem(84);
+        }
+      }
+    }
+  }
+}
+
+.footer_contetn {
+  color: #000922;
+  padding: rem(60) 0 rem(90);
+  text-align: center;
+  p {
+    padding: rem(12);
+    font-size: rem(36);
+
+    &:first-child {
+      font-size: rem(42);
+    }
+  }
+}

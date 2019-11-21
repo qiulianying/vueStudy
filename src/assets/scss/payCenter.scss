@@ -1,0 +1,376 @@
+@charset "utf-8";
+
+/*引入公共样式*/
+
+@import "base";
+@import "common";
+
+/*该页面公共样式*/
+
+
+/*公共样式*/
+
+.mine_inp_blue {
+    background: $backgroundColor;
+    color: #FFFFFF;
+}
+
+.pay_bg {
+    background: #FFFFFF;
+}
+
+.PayMoney_co {
+    color: #ff6000;
+}
+
+.padding_take {
+    padding: rem(30) rem(42);
+}
+
+
+/*充值中心具体内容样式*/
+
+.main_content {
+    width: 100%;
+    color: #000922;
+    .PayMoney_wrap {
+        background: #FFFFFF;
+        position: relative;
+        margin-bottom: rem(24);
+        .PayMoney_p {
+            padding-bottom: rem(24);
+            font-size: rem(48);
+        }
+    }
+    .pay_content {
+        background-color: #FFFFFF;
+        .PayMoney3_title {
+            padding: 0 rem(42);
+            .PayMoney3_title1, .PayMoney3_title2 {
+                display: inline-block;
+                vertical-align: middle;
+                padding: rem(30) rem(48) 0 0;
+                font-size: rem(42);
+                height: rem(96);
+
+                .item_img {
+                    width: rem(72);
+                    height: rem(72);
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .weixin_bg {
+                    background: url("../images/icon/icon_weixin.png") center no-repeat;
+                    background-size: 100% 100%;
+                }
+                .zhifu_bg {
+                    background: url("../images/icon/icon_zhifubao.png") center no-repeat;
+                    background-size: 100% 100%;
+                }
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: rem(18);
+                }
+            }
+            .PayMoney3_title1 {
+                margin-right: rem(48);
+            }
+            /*活动的active*/
+            .PayMoney3_active {
+                border-bottom: solid 3px #6EAEFE;
+            }
+        }
+        .guess_con {
+            display: inline-block;
+            background-color: #FFFFFF;
+            text-align: center;
+            li {
+                width: calc(47% - 2px);
+                float: left;
+                display: table;
+                margin-bottom: rem(30);
+                text-align: center;
+                font-size: rem(42);
+                height: rem(192);
+                border: 1px solid #6EAEFE;
+                overflow: hidden;
+                position: relative;
+                background: #fff;
+                margin-right: 6%;
+                &:nth-child(2n+0) {
+                    margin-right: 0;
+                }
+                .guess_con_content {
+                    display: table-cell;
+                    vertical-align: middle;
+                    .PayMoney_co {
+                        font-size: rem(48);
+                    }
+                    .PayMoney_mgt {
+                        .PayMoney_co {
+                            font-size: rem(42);
+                        }
+                    }
+                }
+            }
+            /*点击选择*/
+            .guess_check {
+                background: $backgroundColor;
+                color: #FFFFFF;
+                .PayMoney_co {
+                    color: #FFFFFF;
+                }
+            }
+        }
+        .guess_click {
+            .PayMoney_btn_next {
+                height: rem(114);
+                line-height: rem(114);
+                font-size: rem(42);
+                margin: 0 auto;
+                display: block;
+                border-radius: 6px;
+                width: 100%;
+                background: $backgroundColor;
+                color: #FFFFFF;
+                text-align: center;
+            }
+        }
+        .PayMoney_tip {
+            .PayMoney_attition {
+                padding: rem(30) rem(42);
+                border: 1px solid #d9d9d9;
+                border-radius: 5px;
+                color: #000922;
+                p {
+                    margin-bottom: rem(12);
+                }
+                .t_center {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+/*VIP充值样式*/
+
+.main_VIPpay {
+    width: 100%;
+    color: #000922;
+    .PayMoney_wrap {
+        height: rem(300);
+        background: url(../delete/vip_bg.png) no-repeat;
+        background-size: 100% 100%;
+        color: #fff;
+        position: relative;
+        .imgBox {
+            width: rem(136);
+            height: rem(136);
+            border: 2px solid #9ac2f9;
+            border-radius: 3px;
+            overflow: hidden;
+            position: absolute;
+            left: rem(45);
+            top: rem(60);
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            .noVip {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -5px;
+                right: -2px;
+                display: block;
+                @include bgimg("../images/icon/member_icon_black.png");
+            }
+            .isVip {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -5px;
+                right: -2px;
+                display: block;
+                @include bgimg("../images/icon/is_vip.png");
+            }
+        }
+        .VIP_message {
+            margin-left: rem(200);
+            padding-top: rem(44);
+            h3 {
+                font-size: rem(42);
+            }
+            p {
+                font-size: rem(36);
+            }
+        }
+    }
+    .pay_content {
+        background-color: #FFFFFF;
+        .PayMoney3_title {
+            padding: 0 rem(42);
+            .vip_tip {
+                font-size: rem(36);
+                color: #939a9f;
+                padding: rem(25) rem(45) rem(45);
+                border-bottom: 1px solid #F8FAFB;
+            }
+            .PayMoney3_title1,
+            .PayMoney3_title2 {
+                display: inline-block;
+                vertical-align: middle;
+                padding: rem(30) rem(48) 0 0;
+                font-size: rem(42);
+                height: rem(96);
+
+                .item_img {
+                    width: rem(72);
+                    height: rem(72);
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .weixin_bg {
+                    background: url("../images/icon/icon_weixin.png") center no-repeat;
+                    background-size: 100% 100%;
+                }
+                .zhifu_bg {
+                    background: url("../images/icon/icon_zhifubao.png") center no-repeat;
+                    background-size: 100% 100%;
+                }
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: rem(18);
+                }
+            }
+            .PayMoney3_title1 {
+                margin-right: rem(48);
+            }
+            /*活动的active*/
+            .PayMoney3_active {
+                border-bottom: solid 3px #6EAEFE;
+            }
+        }
+        .guess_con {
+            height: auto;
+            overflow: hidden;
+            clear: both;
+            margin-top: rem(60);
+            padding: 0 rem(45);
+            li {
+                width: calc(47.8% - 2px);
+                float: left;
+                margin-bottom: rem(30);
+                text-align: center;
+                font-size: rem(42);
+                height: rem(180);
+                line-height: rem(180);
+                border: 1px solid #eae9e9;
+                overflow: hidden;
+                position: relative;
+                background: #fff;
+                margin-right: rem(40);
+                &:nth-child(2n+0) {
+                    margin-right: 0;
+                }
+                .guess_con_content {
+                    .suggest {
+                        width: rem(96);
+                        height: rem(48);
+                        @include bgimg("../images/icon/tj_vip.png");
+                        position: absolute;
+                        z-index: 200;
+                        right: -1px;
+                        top: -1px;
+                    }
+                    .PayMoney_data {
+                        width: 16%;
+                        height: rem(180);
+                        display: block;
+                        text-align: center;
+                        float: left;
+                        color: #939a9f;
+                        background-color: #eae9e9;
+                    }
+                    .PayMoney_sp {
+                        width: 84%;
+                        display: inline-block;
+                        height: rem(180);
+                        color: #ff6000;
+                        font-size: rem(54);
+                    }
+                }
+            }
+            /*点击选择*/
+            .guess_check {
+                border: 1px solid #6eaefe;
+                .guess_con_content {
+                    .PayMoney_data {
+                        background-color: #6eaefe;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        .guess_click {
+            .PayMoney_btn_next {
+                height: rem(114);
+                line-height: rem(114);
+                font-size: rem(42);
+                margin: 0 auto;
+                display: block;
+                border-radius: 6px;
+                width: 100%;
+                background: $backgroundColor;
+                color: #FFFFFF;
+                text-align: center;
+            }
+        }
+        .VIP_introduce {
+            padding-bottom: rem(90);
+            .vip_privilege {
+                margin-top: rem(45);
+                line-height: rem(60);
+                height: rem(60);
+                padding: rem(60) rem(45);
+                font-size: rem(48);
+                border-bottom: 1px solid #F8FAFB;
+                border-top: 1px solid #F8FAFB;
+                box-sizing: content-box;
+            }
+            .vip_content {
+                li {
+                    height: rem(180);
+                    position: relative;
+                    border-bottom: 1px solid #F8FAFB;
+                    padding: 0 rem(45);
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    img {
+                        width: rem(96);
+                        height: rem(90);
+                    }
+                    .introduce {
+                        h3 {
+                            font-size: rem(42);
+                            color: #3e4244;
+                            margin-left: rem(30);
+                        }
+                        p {
+                            font-size: rem(36);
+                            color: #939a9f;
+                            margin-left: rem(30);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

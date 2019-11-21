@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+
+/*引入公共样式*/
+
+@import "base";
+@mixin topMarginTop {
+  margin-top: rem(135);
+}
+
+.topMarginTop {
+  @include topMarginTop();
+}
+
+@mixin commonMarginBottom {
+  margin-bottom: rem(24);
+}
+
+@mixin headFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: rem(135);
+  background: $backgroundColor;
+  z-index: 666;
+}
+
+@mixin footerFixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: rem(150);
+  background: #FFFFFF;
+  border-top: 1px solid #dfdfdf;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, .1);
+  text-align: center;
+  z-index: 666;
+}
+
+@mixin navIcon {
+  width: rem(120);
+  height: rem(135);
+}
+
+@mixin commonFlex {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.flex_sp {
+  @include commonFlex;
+  justify-content: space-between;
+}
+
+.flex_st {
+  @include commonFlex;
+  justify-content: flex-start;
+}
+
+.flex_cen {
+  @include commonFlex;
+  justify-content: center;
+}
+
+
+
+/*封面大小*/
+
+.book_size {
+  width: rem(270);
+  height: rem(378);
+}
+
+.book_size_small {
+  width: rem(240);
+  height: rem(336);
+}
+
+.book_shadow {
+  box-shadow: -1px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.book_list_word {
+  width: rem(270);
+  max-height: rem(150);
+  text-align: left;
+  line-height: 1.8;
+}
+
+.book_pd {
+  padding: rem(30) 0;
+}
+
+.text_c {
+  text-align: center;
+}
+
+.text_l {
+  text-align: left;
+}
+
+.text_r {
+  text-align: right;
+}
+
+.posr {
+  position: relative;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.margin_a {
+  margin: 0 auto;
+}
+
+
+/*背景图片的控制*/
+
+@mixin bgimg($url) {
+  background: url($url) center no-repeat;
+  background-size: 100% 100%;
+}
+
+
+
+/*遮盖层样式*/
+
+.mask {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+
+
+/*提示框*/
+
+.list_1 {
+  width: rem(810);
+  height: rem(450);
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: rem(-405);
+  margin-top: rem(-330);
+  border-radius: 6px;
+  z-index: 300;
+  background-color: #FFFFFF;
+  h3 {
+    font-weight: 500;
+    font-size: rem(54);
+    text-align: center;
+    border-bottom: solid 1px #e9eef1;
+    padding: rem(30) 0;
+    color: #333333;
+  }
+  .list_2 {
+    color: #666666;
+    font-size: rem(42);
+    text-align: center;
+    p {
+      width: 100%;
+      line-height: rem(120);
+    }
+    .sure_down {
+      text-align: center;
+      a {
+        width: 88%;
+        display: block;
+        height: rem(120);
+        line-height: rem(120);
+        font-size: rem(54);
+        color: #FFFFFF;
+        background: $backgroundColor;
+        border-radius: 6px;
+        margin: rem(30) auto;
+      }
+    }
+  }
+}
+
+
+
+/* 部分公共头部导航 */
+
+.detail_head {
+  @include headFixed;
+  .head_wrap {
+    padding: 0 rem(30);
+    height: 100%;
+    color: #FFFFFF;
+    .head_icon {
+      @include navIcon;
+      background: url(../images/icon_back.png) no-repeat left center;
+      background-size: rem(80) rem(80);
+    }
+    .head_icon_home {
+      @include navIcon;
+      background: url(../images/icon_home.png) no-repeat left center;
+      background-size: rem(80) rem(80);
+    }
+    .head_title {
+      line-height: rem(135);
+      font-size: rem(54);
+    }
+  }
+}
+
+.more_wrap{
+    height:calc(100% - 50px);
+    overflow-y:auto; 
+}
+
+
+
+/*加载更多*/
+
+.load_wrap {
+  background: #FFF;
+  width: 100%;
+  padding: rem(30) 0;
+  text-align: center;
+  font-size: rem(36);
+  clear: both;
+}
+
+.load_con {
+  width: rem(60);
+  height: rem(60);
+  display: block;
+  margin: 0 auto rem(15);
+  background: url("../images/icon_loading.png") no-repeat center center;
+  background-size: rem(60) rem(60);
+}
+
+.load_animation {
+  -webkit-animation: load 1s infinite linear;
+  animation: load 1s infinite linear;
+}
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/*默认图*/
+
+.recom_moren {
+  display: block;
+  width: rem(502);
+  height: rem(87);
+  margin: rem(30) auto;
+}
+
+
+/*加载动画*/
+
+.pageLoad_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+}
+
+.pageLoad_img {
+  width: rem(240);
+  height: rem(240);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: rem(-120) 0 0 rem(-120);
+  background: url("../images/loding.gif") no-repeat center center;
+  background-size: rem(240) rem(240);
+}
