@@ -1,7 +1,11 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
+import VueResource from 'vue-resource'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+
 Vue.use(Router);
+Vue.use(Vuex);
+Vue.use(VueResource);
 
 /*全局组件*/
 import ComHead from '@/components/alluse/Header'

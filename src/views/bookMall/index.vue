@@ -30,7 +30,8 @@
     <!--中间页面-->
     <Home v-show="tabActive===0"></Home>
 
-
+    <!--首页-->
+    <Detail></Detail>
     <!-- 底部-->
     <com-foot active="1"></com-foot>
   </div>
@@ -39,10 +40,15 @@
 <script>
   import '@/assets/scss/index.scss'
   //首页
-  import Home from '@/views/bookMall/compontent/Home'
+  import Home from './compontent/home.vue';        //类似react的es6引入方法，更加了解，这个也是属于局部引入
+
 
   export default {
     name: "bookMall",
+    components: {
+      //首页
+      Home
+    },
     data() {
       return {
         tabActive: 0,
@@ -63,9 +69,6 @@
       changeTap(e) {
         this.tabActive = e;
       }
-    },
-    component: {
-      Home
     }
   }
 </script>

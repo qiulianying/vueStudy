@@ -1,12 +1,15 @@
 <template>
-  <div>{{msg}}</div>
+  <div>
+    <span>fasdfasdfasdf</span>
+    <span>{{msg}}</span>
+  </div>
   <!--<someComponent></someComponent>-->
 </template>
 
 <script>
   //import someComponent from './someComponent'
   export default {
-    name: "",
+    name: "TestCmp",
     data(){
       return{
         msg:"Hello Vue.js"

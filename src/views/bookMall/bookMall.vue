@@ -21,9 +21,6 @@
       this.animate = toDepth < fromDepth ? 'fadeInLeft' : 'fadeInRight';
 
       next();
-    },
-    component: {
-      //someComponent
     }
   }
 </script>
