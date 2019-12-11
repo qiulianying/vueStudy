@@ -19,9 +19,7 @@
         msg: "Hello Vue.js"
       }
     },
-    props: {
-      active: Number
-    }
+    props:['active']
   }
 </script>
 

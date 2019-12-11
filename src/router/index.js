@@ -10,6 +10,7 @@ Vue.use(VueResource);
 /*全局组件*/
 import ComHead from '@/components/alluse/Header'
 import ComFoot from '@/components/footer'
+import ComPageLoad from '@/components/pageLoad'
 
 /* 书城 */
 import BookMall from '@/views/bookMall/bookMall'
@@ -59,3 +60,5 @@ export default new Router({
 Vue.component('com-head', ComHead);
 //底部tab
 Vue.component('com-foot', ComFoot);
+//加载动画
+Vue.component('com-pageLoad', ComPageLoad);
