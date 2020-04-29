@@ -7,6 +7,7 @@ import router from './router'
 //全局引入并使用饿了么组件
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import store from './store/index'
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
@@ -16,5 +17,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store
 });

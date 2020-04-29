@@ -56,7 +56,7 @@
     },
     data() {
       return {
-        tabActive: 0,
+        tabActive: 4,
         headerTab: [
           {
             message: '首页'
